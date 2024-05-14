@@ -28,10 +28,11 @@ body {
 
 .leftSidebarContainer {
     height: 100%;
-    width: 300px;
+    width: 350px;
     border-right: 1px solid var(--border-color);
     padding: 24px;
     text-align: center;
+    box-sizing: border-box;
 }
 
 /* slides */
@@ -40,5 +41,5 @@ body {
     width: 300px;
     height: 169px;
     background-color: var(--muted-text);
-    margin-bottom: 16px;
+    margin-bottom: 8px;
 }
