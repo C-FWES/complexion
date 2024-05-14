@@ -1,0 +1,35 @@
+:root {
+    --bg-color: #1d1d1d;
+    --input-text-color: #ffffff;
+    --muted-text: #5a5a5a;
+    --border-color: #000000;
+    --slide-text-color: #ffffff;
+}
+
+html {
+    height: 100%;
+}
+
+body {
+    height: 100%;
+    margin: 0;
+    background-color: var(--bg-color);
+}
+
+#root {
+    height: 100%;
+}
+
+.layoutContainer {
+    height: 100%;
+}
+
+/* L sidebar */
+
+.leftSidebarContainer {
+    height: 100%;
+    width: 300px;
+    border-right: 1px solid var(--border-color);
+    padding-left: 24px;
+    padding-right: 24px;
+}
