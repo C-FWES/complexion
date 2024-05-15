@@ -22,7 +22,7 @@ function CMWrapper() {
         <div className='cmContainer'>
           <CodeMirror
             options={{
-              lineNumbers: true,
+              // lineNumbers: true,
               mode: 'markdown',
             }}
             onChange={handleChange}

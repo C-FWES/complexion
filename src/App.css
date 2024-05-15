@@ -64,6 +64,18 @@ body {
     height: 100%;
 }
 
+.react-codemirror2 {
+    height: 100%;
+}
+
+.cmContainer {
+    height: 100%;
+}
+
+.CodeMirror {
+    height: 100% !important;
+}
+
 /* L sidebar */
 
 .leftSidebarContainer {
