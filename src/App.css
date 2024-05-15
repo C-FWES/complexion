@@ -52,12 +52,16 @@ body {
 /* editor */
 
 .rightAlign {
-    height: 100%;
+    height: calc(100% - 48px);
+    width: calc(100% - 350px);
+    position: absolute;
+    top: 0;
+    margin-left: 350px;
+    margin-top: 48px;
 }
 
 .editorContainer {
     height: 100%;
-    width: calc(100% - 350px);
 }
 
 /* L sidebar */
