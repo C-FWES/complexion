@@ -75,9 +75,9 @@ body {
 .CodeMirror {
     height: 100% !important;
     background-color: var(--bg-color) !important;
-    padding: 24px;
+    padding: 48px 128px;
     color: var(--input-text-color) !important;
-    font-size: 16px;
+    font-size: 24px;
     box-sizing: border-box;
 }
 
