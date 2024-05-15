@@ -12,7 +12,7 @@ function CMWrapper() {
 
     if (lastLine === '---') {
       // Dispatch a new event
-      const event = new Event('newLineWithDashes');
+      const event = new Event('deploySlide');
       window.dispatchEvent(event);
     }
   };

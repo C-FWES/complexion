@@ -81,6 +81,10 @@ body {
     box-sizing: border-box;
 }
 
+.cm-header {
+    color: var(--input-text-color) !important;
+}
+
 /* L sidebar */
 
 .leftSidebarContainer {
