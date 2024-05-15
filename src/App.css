@@ -85,6 +85,10 @@ body {
     color: var(--input-text-color) !important;
 }
 
+.CodeMirror-cursor {
+    border-left: 1px solid var(--input-text-color) !important;
+}
+
 /* L sidebar */
 
 .leftSidebarContainer {
