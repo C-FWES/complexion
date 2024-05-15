@@ -49,6 +49,17 @@ body {
     transform: translateY(-50%);
   }
 
+/* editor */
+
+.rightAlign {
+    height: 100%;
+}
+
+.editorContainer {
+    height: 100%;
+    width: calc(100% - 350px);
+}
+
 /* L sidebar */
 
 .leftSidebarContainer {
