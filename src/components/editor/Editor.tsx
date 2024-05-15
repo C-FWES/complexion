@@ -6,7 +6,7 @@ function Editor() {
     return (
       <>
         <div className='editorContainer'>
-         
+          
         </div>
       </>
     )
