@@ -22,13 +22,13 @@ function CMWrapper() {
     const deletedIndex = prevLines.find(index => !currentBreaks.includes(index));
     if (deletedIndex !== undefined) {
       console.log(deletedIndex)
-      const event = new CustomEvent('removeSlide', { detail: tempBreaks.indexOf(deletedIndex) });
+      const event = new CustomEvent('removeSlide', { detail: deletedIndex });
       console.log(event)
       window.dispatchEvent(event);
     } 
     // create new slide on slide break
     else if (lastLine === '---') {
-      const event = new Event('deploySlide');
+      const event = new CustomEvent('deploySlide', { detail: lines.length - 1});
       window.dispatchEvent(event);
     }
 

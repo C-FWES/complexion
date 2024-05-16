@@ -9,7 +9,7 @@ function LSidebar() {
     useEffect(() => {
       const handleDeploySlide = (event) => {
         // create an empty slide object
-        const slideObj = "empty"
+        const slideObj = [event.detail, "empty"]
         setCreatedSlides(prevSlides => [...prevSlides, slideObj])
         console.log(createdSlides)
       }
@@ -18,7 +18,7 @@ function LSidebar() {
         const index = event.detail;
         if (index > -1) {
           setCreatedSlides(createdSlides => {
-            return createdSlides.filter((s, i) => (i != index))
+            return createdSlides.filter((s, i) => (s[0] != index))
           })
         }
       }
