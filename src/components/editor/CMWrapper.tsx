@@ -11,6 +11,7 @@ function CMWrapper() {
     const lastLine = lines[lines.length - 1];
 
     if (lastLine === '---') {
+      console.log("ok")
       // Dispatch a new event
       const event = new Event('deploySlide');
       window.dispatchEvent(event);
