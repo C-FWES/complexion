@@ -14,10 +14,21 @@ function LSidebar() {
         console.log(createdSlides)
       }
 
+      const handleRemoveSlide = (event) => {
+        const index = event.detail;
+        if (index > -1) {
+          setCreatedSlides(createdSlides => {
+            return createdSlides.filter((s, i) => (i != index))
+          })
+        }
+      }
+
       window.addEventListener('deploySlide', handleDeploySlide)
+      window.addEventListener('removeSlide', handleRemoveSlide)
 
       return () => {
         window.removeEventListener('deploySlide', handleDeploySlide)
+        window.removeEventListener('removeSlide', handleRemoveSlide)
       }
     }, [])
   
