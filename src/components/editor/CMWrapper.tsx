@@ -33,6 +33,17 @@ function CMWrapper() {
     }
 
     prevIndices.current = currentBreaks;
+
+    // find written markdown content, and assign it to the correct slide 
+    lines.forEach((line, index) => {
+      if (line !== '---') {
+        const slideBreakIndex = currentBreaks.filter(breakIndex => breakIndex < index);
+        const belongsToSlideBreak = slideBreakIndex[slideBreakIndex.length - 1];
+        // console.log(`text on line ${index} belongs to slide break at line ${belongsToSlideBreak}`);
+        const event = new CustomEvent('updateSlide', { detail: [belongsToSlideBreak, line]})
+        window.dispatchEvent(event);
+      }
+    });
   };
   
     return (

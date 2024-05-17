@@ -5,7 +5,7 @@ import PreviewSlide from "../slide/PreviewSlide";
 function LSidebar() {
 
     const [createdSlides, setCreatedSlides] = useState([])
-    console.log(createdSlides)
+    // console.log(createdSlides)
 
     useEffect(() => {
       const handleDeploySlide = (event) => {
