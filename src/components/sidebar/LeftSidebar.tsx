@@ -5,13 +5,13 @@ import PreviewSlide from "../slide/PreviewSlide";
 function LSidebar() {
 
     const [createdSlides, setCreatedSlides] = useState([])
+    console.log(createdSlides)
 
     useEffect(() => {
       const handleDeploySlide = (event) => {
         // create an empty slide object
         const slideObj = [event.detail, "empty"]
         setCreatedSlides(prevSlides => [...prevSlides, slideObj])
-        console.log(createdSlides)
       }
 
       const handleRemoveSlide = (event) => {
