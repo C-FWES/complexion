@@ -29,12 +29,6 @@ function CMWrapper() {
       // console.log(event)
       window.dispatchEvent(event);
     } 
-    // create new slide on slide break
-    // if (lastLine === '---' && lines.length - 1 > deletedBreakIndex) {
-    //   const event = new CustomEvent('deploySlide', { detail: lines.length - 1});
-    //   window.dispatchEvent(event);
-    //   setDeletedBreakIndex(-1)
-    // }
 
     // check if slide break is added
     const addedIndex = currentBreaks.find(index => !prevLines.includes(index));
