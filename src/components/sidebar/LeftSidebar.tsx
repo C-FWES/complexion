@@ -56,7 +56,7 @@ function LSidebar() {
       <>
         <div className='leftSidebarContainer'>
             {createdSlides.map((slide) => (
-              <PreviewSlide></PreviewSlide>
+              <PreviewSlide slideInfo={slide}></PreviewSlide>
             ))
           }
         </div>

@@ -108,4 +108,12 @@ body {
     height: 169px;
     background-color: var(--muted-text);
     margin-bottom: 8px;
+    padding: 16px;
+    box-sizing: border-box;
+}
+
+.previewSlideTextContainer {
+    width: 100%;
+    height: 100%;
+    text-align: center;
 }
