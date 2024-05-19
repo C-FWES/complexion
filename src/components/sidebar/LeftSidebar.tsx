@@ -1,6 +1,7 @@
 import React, { useEffect } from "react";
 import { useState } from 'react'
 import PreviewSlide from "../slide/PreviewSlide";
+import { gradeSlideIdFluorescentHsl } from "../../theme/FluorescentGrader";
 
 function LSidebar() {
 
@@ -57,7 +58,7 @@ function LSidebar() {
         <div className='leftSidebarContainer'>
             {createdSlides.map((slide, i) => (
               <div className="previewObject">
-                <span className="slideId">{i + 1}</span>
+                <span className="slideId" style={{backgroundColor: gradeSlideIdFluorescentHsl(i)}}>{i + 1}</span>
                 <PreviewSlide slideInfo={slide} key={i} index={i}></PreviewSlide>
               </div>
             ))

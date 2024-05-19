@@ -133,7 +133,6 @@ body {
     color: var(--slide-text-color);
     display: inline-block;
     padding: 8px;
-    background-color: var(--muted-text);
     border-radius: 50%;
     width: 16px;
     height: 16px;
