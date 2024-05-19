@@ -58,7 +58,7 @@ function LSidebar() {
             {createdSlides.map((slide, i) => (
               <div className="previewObject">
                 <span className="slideId">{i + 1}</span>
-                <PreviewSlide slideInfo={slide} key={i}></PreviewSlide>
+                <PreviewSlide slideInfo={slide} key={i} index={i}></PreviewSlide>
               </div>
             ))
           }
