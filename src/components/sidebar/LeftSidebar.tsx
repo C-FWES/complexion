@@ -32,7 +32,7 @@ function LSidebar() {
         // update content here
         setCreatedSlides(prevSlides => {
           return prevSlides.map((slide, index) => {
-            if (slide[0] === slideIndex && contentObject.length > 0) {
+            if (slide[0] === slideIndex && contentObject.length > 0 && contentObject != '-' && contentObject != '--') {
               console.log('good!')
               return [slide[0], contentObject]; // update the second index with contentObject
             } else {
