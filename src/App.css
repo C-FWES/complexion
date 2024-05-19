@@ -30,7 +30,7 @@ body {
 /* top bar */
 .barContainer { 
     height: 48px;
-    width: calc(100% - 350px);
+    width: calc(100% - 370px);
     position: absolute;
     top: 0;
     right: 0;
@@ -54,10 +54,10 @@ body {
 
 .rightAlign {
     height: calc(100% - 49px);
-    width: calc(100% - 350px);
+    width: calc(100% - 370px);
     position: absolute;
     bottom: 0;
-    margin-left: 350px;
+    margin-left: 370px;
     margin-top: 48px;
 }
 
@@ -94,15 +94,21 @@ body {
 
 .leftSidebarContainer {
     height: 100%;
-    width: 350px;
+    width: 370px;
     border-right: 1px solid var(--border-color);
-    padding: 24px;
-    text-align: center;
+    padding: 24px 16px;
     box-sizing: border-box;
     overflow: scroll;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 /* slides */
+
+.previewObject {
+    position: relative;
+}
 
 .previewSlideContainer {
     width: 300px;
@@ -112,6 +118,7 @@ body {
     padding: 24px;
     box-sizing: border-box;
     border-radius: 4px;
+    margin-left: 44px;
 }
 
 .previewSlideTextContainer {
@@ -119,6 +126,19 @@ body {
     height: 100%;
     text-align: left;
     margin-bottom: auto;
+}
+
+.slideId {
+    color: var(--slide-text-color);
+    display: inline-block;
+    padding: 8px;
+    background-color: var(--muted-text);
+    border-radius: 50%;
+    width: 16px;
+    height: 16px;
+    font-size: 14px;
+    text-align: center;
+    position: absolute;
 }
 
 h1 {
