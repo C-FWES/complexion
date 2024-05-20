@@ -143,9 +143,14 @@ body {
 }
 
 h1 {
-    margin: 0;
+    margin-bottom: 8px;
+    margin-top: 0;
     font-size: 1.6rem;
     color: var(--slide-text-color);
-    position: absolute;
-    bottom: 0;
+}
+
+h2 {
+    margin: 0;
+    font-size: 1.2rem;
+    color: var(--slide-text-color);
 }

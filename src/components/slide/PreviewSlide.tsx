@@ -33,6 +33,7 @@ function PreviewSlide({slideInfo, index}) {
         <div className='previewSlideContainer' style={{backgroundColor: slideBgHsl}}>
           <div className="previewSlideTextContainer">
             {header && <h1>{header}</h1>}
+            {subHeader && <h2>{subHeader}</h2>}
           </div>
         </div>
       </>
