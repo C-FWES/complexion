@@ -26,9 +26,9 @@ function LSidebar() {
 
       const updateSlideContent = (event) => {
         const slideIndex = event.detail[0]
-        console.log("slide index " + slideIndex)
+        // console.log("slide index " + slideIndex)
         const contentObject = event.detail[1]
-        console.log("content to " + contentObject)
+        // console.log("content to " + contentObject)
         const contentLineIndex = event.detail[2]
         // update content here
         setCreatedSlides(prevSlides => {
