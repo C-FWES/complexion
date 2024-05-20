@@ -8,9 +8,9 @@ function PreviewSlide({slideInfo, index}) {
     const [subHeader, setSubheader] = useState(null)
     const [ol, setOl] = useState(null)
 
-    useEffect(() => {
-      setHeader(slideInfo[1])
-    }, [slideInfo])
+    // useEffect(() => {
+    //   setHeader(slideInfo[1][0])
+    // }, [slideInfo])
 
     const slideBgHsl = gradeSlideFluorescentHsl(index);
   

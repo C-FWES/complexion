@@ -40,7 +40,7 @@ function CMWrapper() {
         const slideBreakIndex = currentBreaks.filter(breakIndex => breakIndex < index);
         const belongsToSlideBreak = slideBreakIndex[slideBreakIndex.length - 1];
         // console.log(`text on line ${index} belongs to slide break at line ${belongsToSlideBreak}`);
-        const event = new CustomEvent('updateSlide', { detail: [belongsToSlideBreak, line]})
+        const event = new CustomEvent('updateSlide', { detail: [belongsToSlideBreak, line, index]})
         window.dispatchEvent(event);
       }
     });

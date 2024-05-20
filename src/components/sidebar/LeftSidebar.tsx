@@ -11,7 +11,7 @@ function LSidebar() {
     useEffect(() => {
       const handleDeploySlide = (event) => {
         // create an empty slide object
-        const slideObj = [event.detail, ""]
+        const slideObj = [event.detail, []]
         setCreatedSlides(prevSlides => [...prevSlides, slideObj])
       }
 
@@ -29,12 +29,16 @@ function LSidebar() {
         console.log("slide index " + slideIndex)
         const contentObject = event.detail[1]
         console.log("content to " + contentObject)
+        const contentLineIndex = event.detail[2]
         // update content here
         setCreatedSlides(prevSlides => {
           return prevSlides.map((slide, index) => {
             if (slide[0] === slideIndex && contentObject.length > 0 && contentObject != '-' && contentObject != '--') {
-              console.log('good!')
-              return [slide[0], contentObject]; // update the second index with contentObject
+              let existingLines = slide[1];
+              if (contentLineIndex !== -1) {
+                existingLines[contentLineIndex] = contentObject;
+              }
+              return [slide[0], existingLines]; // update the second index with contentObject
             } else {
               return slide; // return the slide unchanged
             }
