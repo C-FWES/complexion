@@ -34,6 +34,7 @@ function PreviewSlide({slideInfo, index}) {
           <div className="previewSlideTextContainer">
             {header && <h1>{header}</h1>}
             {subHeader && <h2>{subHeader}</h2>}
+            {subsubHeader && <h3>{subsubHeader}</h3>}
           </div>
         </div>
       </>

@@ -153,4 +153,11 @@ h2 {
     margin: 0;
     font-size: 1.2rem;
     color: var(--slide-text-color);
+    margin-bottom: 8px;
+}
+
+h3 {
+    margin: 0;
+    font-size: 0.8rem;
+    color: var(--slide-text-color);
 }
