@@ -162,6 +162,7 @@ body {
     background-color: var(--bg-color);
     border-radius: 16px;
     margin-bottom: 48px;
+    left: 50%;
 }
 
 .presenterNavigatorIncrementButton {
