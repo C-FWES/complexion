@@ -6,7 +6,7 @@ const PresenterNavigator = () => {
     return (
         <div className="presenterNavigatorContainer">
             <div className="presenterNavigatorNavigationWrapper">
-                <button className="presenterNavigatorDecrementButton">Prev</button>
+                <button className="presenterNavigatorIncrementButton">Prev</button>
                 <div className="presenterNavigatorSlideCounterWrapper">
                     <span className="presenterNavigatorSlideCounter">1 / 20</span>
                 </div>

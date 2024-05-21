@@ -153,6 +153,33 @@ body {
     position: absolute;
 }
 
+.presenterNavigatorContainer {
+    /* width: 300px; */
+    height: 48px;
+    position: absolute;
+    bottom: 0;
+    padding: 24px;
+    background-color: var(--bg-color);
+    border-radius: 16px;
+    margin-bottom: 48px;
+}
+
+.presenterNavigatorIncrementButton {
+    display: inline-block;
+    font-family: var(--ui-font);
+    border: none;
+    background-color: var(--muted-text);
+    color: var(--input-text-color);
+    padding: 8px;
+    border-radius: 8px;
+}
+
+.presenterNavigatorSlideCounterWrapper {
+    display: inline-block;
+    padding-left: 16px;
+    padding-right: 16px;
+}
+
 h1 {
     margin-bottom: 8px;
     margin-top: 0;
