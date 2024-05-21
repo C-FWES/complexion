@@ -5,7 +5,7 @@ import '../../App.css'
 function Bar() {
 
   const enterPresentationInterface = () => {
-
+    
   }
 
   return (

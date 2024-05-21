@@ -1,25 +1,26 @@
-import React, { useEffect } from "react";
+import React, { useContext, useEffect } from "react";
 import { useState } from 'react'
 import PreviewSlide from "../slide/PreviewSlide";
 import { gradeSlideIdFluorescentHsl } from "../../theme/FluorescentGrader";
+import SlideContext from "../../SlideContext";
 
 function LSidebar() {
 
-    const [createdSlides, setCreatedSlides] = useState([])
-    console.log(createdSlides)
+    const {slides, setSlides} = useContext(SlideContext)
+    // console.log(createdSlides)
 
     useEffect(() => {
       const handleDeploySlide = (event) => {
         // create an empty slide object
         const slideObj = [event.detail, []]
-        setCreatedSlides(prevSlides => [...prevSlides, slideObj])
+        setSlides(prevSlides => [...prevSlides, slideObj])
       }
 
       const handleRemoveSlide = (event) => {
         const index = event.detail;
         if (index > -1) {
-          setCreatedSlides(createdSlides => {
-            return createdSlides.filter((s, i) => (s[0] != index))
+          setSlides(slides => {
+            return slides.filter((s, i) => (s[0] != index))
           })
         }
       }
@@ -31,7 +32,7 @@ function LSidebar() {
         // console.log("content to " + contentObject)
         const contentLineIndex = event.detail[2]
         // update content here
-        setCreatedSlides(prevSlides => {
+        setSlides(prevSlides => {
           return prevSlides.map((slide, index) => {
             if (slide[0] === slideIndex && contentObject.length > 0 && contentObject != '-' && contentObject != '--') {
               let existingLines = slide[1];
@@ -55,12 +56,12 @@ function LSidebar() {
         window.removeEventListener('removeSlide', handleRemoveSlide)
         window.removeEventListener('updateSlide', updateSlideContent)
       }
-    }, [createdSlides])
+    }, [slides])
   
     return (
       <>
         <div className='leftSidebarContainer'>
-            {createdSlides.map((slide, i) => (
+            {slides.map((slide, i) => (
               <div className="previewObject">
                 <span className="slideId" style={{backgroundColor: gradeSlideIdFluorescentHsl(i)}}>{i + 1}</span>
                 <PreviewSlide slideInfo={slide} key={i} index={i}></PreviewSlide>
