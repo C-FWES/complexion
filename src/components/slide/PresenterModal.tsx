@@ -1,5 +1,6 @@
 import React from "react";
 import Modal from 'react-modal';
+import PresenterNavigator from "./PresenterNavigator";
 
 const PresenterModal = ({open, onHide, slides}) => {
 
@@ -23,7 +24,7 @@ const PresenterModal = ({open, onHide, slides}) => {
             }
         }}>
             <div className="presentationContainer">
-
+                <PresenterNavigator></PresenterNavigator>
             </div>
         </Modal>
     )
