@@ -2,15 +2,15 @@
 import React from "react";
 import { useState } from "react";
 
-const PresenterNavigator = () => {
+const PresenterNavigator = ({incrementSlide, decrementSlide, slides}) => {
     return (
         <div className="presenterNavigatorContainer">
             <div className="presenterNavigatorNavigationWrapper">
-                <button className="presenterNavigatorIncrementButton">Prev</button>
+                <button className="presenterNavigatorIncrementButton" onClick={decrementSlide}>Prev</button>
                 <div className="presenterNavigatorSlideCounterWrapper">
-                    <span className="presenterNavigatorSlideCounter">1 / 20</span>
+                    <span className="presenterNavigatorSlideCounter">{slides.length}</span>
                 </div>
-                <button className="presenterNavigatorIncrementButton">Next</button>
+                <button className="presenterNavigatorIncrementButton" onClick={incrementSlide}>Next</button>
             </div>
         </div>
     )

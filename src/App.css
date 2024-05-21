@@ -141,6 +141,26 @@ body {
     position: relative;
 }
 
+
+.presenterSlideContainer {
+    width: 100vw;
+    height: 100vh;
+    /* background-color: var(--initial-fluorescent); */
+    margin-bottom: 8px;
+    padding: 24px;
+    box-sizing: border-box;
+    border-radius: 4px;
+    /* margin-left: 44px; */
+}
+
+.presenterSlideTextContainer {
+    width: 100%;
+    height: 100%;
+    text-align: left;
+    margin-bottom: auto;
+    position: relative;
+}
+
 .slideId {
     color: var(--slide-text-color);
     display: inline-block;

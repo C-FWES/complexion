@@ -1,8 +1,19 @@
-import React from "react";
+import React, { useState } from "react";
 import Modal from 'react-modal';
 import PresenterNavigator from "./PresenterNavigator";
+import PresenterSlide from "./PresenterSlide";
 
 const PresenterModal = ({open, onHide, slides}) => {
+
+    const [currentSlideIndex, setCurrentSlideIndex] = useState(1)
+
+    const incrementSlide = () => {
+        setCurrentSlideIndex(currentSlideIndex + 1)
+    }
+
+    const decrementSlide = () => {
+        setCurrentSlideIndex(currentSlideIndex - 1)
+    }
 
     return (
         <Modal 
@@ -24,7 +35,10 @@ const PresenterModal = ({open, onHide, slides}) => {
             }
         }}>
             <div className="presentationContainer">
-                <PresenterNavigator></PresenterNavigator>
+                {
+                    <PresenterSlide slideInfo={slides[currentSlideIndex]} index={currentSlideIndex}></PresenterSlide>
+                }
+                <PresenterNavigator incrementSlide={incrementSlide} decrementSlide={decrementSlide} slides={slides}></PresenterNavigator>
             </div>
         </Modal>
     )
