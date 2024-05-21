@@ -5,7 +5,7 @@ import PresenterSlide from "./PresenterSlide";
 
 const PresenterModal = ({open, onHide, slides}) => {
 
-    const [currentSlideIndex, setCurrentSlideIndex] = useState(1)
+    const [currentSlideIndex, setCurrentSlideIndex] = useState(0)
 
     const incrementSlide = () => {
         setCurrentSlideIndex(currentSlideIndex + 1)
