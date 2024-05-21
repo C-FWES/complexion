@@ -4,12 +4,15 @@ import viteLogo from '/vite.svg'
 import LSidebar from './components/sidebar/LeftSidebar'
 import Bar from './components/menu/Bar'
 import Editor from './components/editor/Editor'
+import SlideContext from './SlideContext'
 import './App.css'
 
 function App() {
 
+  const [slides, setSlides] = useState([])
+
   return (
-    <>
+    <SlideContext.Provider value={{slides, setSlides}}>
       <div className='layoutContainer'>
         <LSidebar></LSidebar>
         <Bar></Bar>
@@ -17,7 +20,7 @@ function App() {
           <Editor></Editor>
         </div>
       </div>
-    </>
+    </SlideContext.Provider>
   )
 }
 
