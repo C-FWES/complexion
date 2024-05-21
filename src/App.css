@@ -51,6 +51,17 @@ body {
     transform: translateY(-50%);
   }
 
+  .barPlayButtonContainer {
+    float: right;
+    color: var(--slide-text-color);
+    margin-top: 12px;
+    margin-right: 24px;
+  }
+
+  .barPlayButtonContainer:hover {
+    color: var(--input-text-color);
+  }
+
 /* editor */
 
 .rightAlign {

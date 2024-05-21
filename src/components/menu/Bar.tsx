@@ -10,6 +10,7 @@ function Bar() {
         <div className='barIconWrapper'>
             <span className='barTitle'>title</span>
         </div>
+        <span className='barPlayButtonContainer'>Present</span>
       </div>
     </>
   )
