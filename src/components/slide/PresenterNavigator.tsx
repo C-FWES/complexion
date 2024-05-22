@@ -1,8 +1,24 @@
 // a widget to allow navigating from slide to slide
-import React from "react";
+import React, { useEffect } from "react";
 import { useState } from "react";
 
 const PresenterNavigator = ({incrementSlide, decrementSlide, slides, currentIndex}) => {
+    
+    // use arrow keys bind
+    useEffect(() => {
+        const down = (e) => {
+            if (e.key === 'ArrowLeft') {
+                decrementSlide()
+            } else if (e.key === 'ArrowRight') {
+                incrementSlide()
+            }
+        }
+
+        document.addEventListener('keydown', down)
+
+        return () => document.removeEventListener('keydown', down)
+    }, [currentIndex])
+    
     return (
         <div className="presenterNavigatorContainer">
             <div className="presenterNavigatorNavigationWrapper">
