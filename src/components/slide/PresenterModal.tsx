@@ -38,7 +38,7 @@ const PresenterModal = ({open, onHide, slides}) => {
                 {
                     <PresenterSlide slideInfo={slides[currentSlideIndex]} index={currentSlideIndex}></PresenterSlide>
                 }
-                <PresenterNavigator incrementSlide={incrementSlide} decrementSlide={decrementSlide} slides={slides}></PresenterNavigator>
+                <PresenterNavigator incrementSlide={incrementSlide} decrementSlide={decrementSlide} slides={slides} currentIndex={currentSlideIndex}></PresenterNavigator>
             </div>
         </Modal>
     )
