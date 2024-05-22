@@ -8,11 +8,15 @@ const PresenterModal = ({open, onHide, slides}) => {
     const [currentSlideIndex, setCurrentSlideIndex] = useState(0)
 
     const incrementSlide = () => {
-        setCurrentSlideIndex(currentSlideIndex + 1)
+        if (currentSlideIndex < slides.length - 1) {
+            setCurrentSlideIndex(currentSlideIndex + 1)
+        }
     }
 
     const decrementSlide = () => {
-        setCurrentSlideIndex(currentSlideIndex - 1)
+        if (currentSlideIndex > 0) {
+            setCurrentSlideIndex(currentSlideIndex - 1)
+        }
     }
 
     return (
