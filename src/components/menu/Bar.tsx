@@ -9,6 +9,7 @@ function Bar() {
   const [presenterModalOpen, setPresenterModalOpen] = useState(false)
 
   const enterPresentationInterface = () => {
+    console.log(slides)
     setPresenterModalOpen(true)
   }
 
