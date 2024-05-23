@@ -7,7 +7,7 @@ import SlideContext from "../../SlideContext";
 function LSidebar() {
 
     const {slides, setSlides} = useContext(SlideContext)
-    // console.log(createdSlides)
+    console.log(slides)
 
     useEffect(() => {
       const handleDeploySlide = (event) => {
