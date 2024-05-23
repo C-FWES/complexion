@@ -224,3 +224,9 @@ h3 {
     font-size: 0.8em;
     color: var(--slide-text-color);
 }
+
+p {
+    color: var(--slide-text-color);
+    margin-top: 0;
+    margin-bottom: 0.4em;
+}
