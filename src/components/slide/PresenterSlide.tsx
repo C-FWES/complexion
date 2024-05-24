@@ -11,7 +11,7 @@ function PresenterSlide({slideInfo, index}) {
     const [subsubHeader, setSubsubheader] = useState(null)
     const [ol, setOl] = useState([])
 
-    // console.log(ol)
+    console.log(ol)
 
     useEffect(() => {
       // parse markdown strings
@@ -27,14 +27,14 @@ function PresenterSlide({slideInfo, index}) {
           }
         } else if (stem && !isNaN(stem.charAt(0)) && stem.charAt(1) === '.') {
             const olIndex = parseOl(stem)
-            console.log(olIndex)
-            let temp = [...ol]
-            temp[olIndex] = stem
-            console.log(temp)
-            setOl(temp)
+            setOl(prevOl => {
+                let temp = [...prevOl]
+                temp[olIndex] = stem
+                return temp
+            })
         }
       }
-    }, [slideInfo])
+    }, [])
 
     const slideBgHsl = gradeSlideFluorescentHsl(index);
   
