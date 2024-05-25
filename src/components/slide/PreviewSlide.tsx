@@ -1,6 +1,7 @@
 import React, { useEffect } from "react";
 import { useState } from 'react'
 import { gradeSlideFluorescentHsl } from "../../theme/FluorescentGrader";
+import { gradeSlideBorderFluorescentHsl } from "../../theme/FluorescentGrader";
 import { parsePrefix } from "../../parse/ParsePrefix";
 import { parseOl } from "../../parse/ParseOl";
 
@@ -33,10 +34,11 @@ function PreviewSlide({slideInfo, index, activeSlideIndex}) {
     }, [slideInfo])
 
     const slideBgHsl = gradeSlideFluorescentHsl(index);
+    const slideBgHslLight = gradeSlideBorderFluorescentHsl(index)
   
     return (
       <>
-        <div className='previewSlideContainer' style={{backgroundColor: slideBgHsl, border: activeSlideIndex === slideInfo[0] ? `2px solid ${slideBgHsl}` : 'initial'}}>
+        <div className='previewSlideContainer' style={{backgroundColor: slideBgHsl, border: activeSlideIndex === slideInfo[0] ? `2px solid ${slideBgHslLight}` : 'initial'}}>
           <div className="previewSlideTextContainer">
             {header && <h1>{header}</h1>}
             {subHeader && <h2>{subHeader}</h2>}
