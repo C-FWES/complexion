@@ -4,7 +4,7 @@ import { gradeSlideFluorescentHsl } from "../../theme/FluorescentGrader";
 import { parsePrefix } from "../../parse/ParsePrefix";
 import { parseOl } from "../../parse/ParseOl";
 
-function PreviewSlide({slideInfo, index}) {
+function PreviewSlide({slideInfo, index, activeSlideIndex}) {
 
     const [header, setHeader] = useState(null)
     const [subHeader, setSubheader] = useState(null)
@@ -36,7 +36,7 @@ function PreviewSlide({slideInfo, index}) {
   
     return (
       <>
-        <div className='previewSlideContainer' style={{backgroundColor: slideBgHsl}}>
+        <div className='previewSlideContainer' style={{backgroundColor: slideBgHsl, border: activeSlideIndex === slideInfo[0] ? `2px solid ${slideBgHsl}` : 'initial'}}>
           <div className="previewSlideTextContainer">
             {header && <h1>{header}</h1>}
             {subHeader && <h2>{subHeader}</h2>}

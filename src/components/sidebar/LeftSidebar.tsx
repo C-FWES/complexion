@@ -7,6 +7,7 @@ import SlideContext from "../../SlideContext";
 function LSidebar() {
 
     const {slides, setSlides} = useContext(SlideContext)
+    const [activeSlideIndex, setActiveSlideIndex] = useState(-1)
     // console.log(slides)
 
     useEffect(() => {
@@ -27,6 +28,7 @@ function LSidebar() {
 
       const updateSlideContent = (event) => {
         const slideIndex = event.detail[0]
+        setActiveSlideIndex(slideIndex)
         // console.log("slide index " + slideIndex)
         const contentObject = event.detail[1]
         // console.log("content to " + contentObject)
@@ -64,7 +66,7 @@ function LSidebar() {
             {slides.map((slide, i) => (
               <div className="previewObject">
                 <span className="slideId" style={{backgroundColor: gradeSlideIdFluorescentHsl(i)}}>{i + 1}</span>
-                <PreviewSlide slideInfo={slide} key={i} index={i}></PreviewSlide>
+                <PreviewSlide slideInfo={slide} key={i} index={i} activeSlideIndex={activeSlideIndex}></PreviewSlide>
               </div>
             ))
           }
