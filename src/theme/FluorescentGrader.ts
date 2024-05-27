@@ -8,13 +8,13 @@ export const gradeSlideFluorescentHsl = (i) => {
 }
 
 export const gradeSlideIdFluorescentHsl = (i) => {
-    const hslOrientation = 190 + (i * 20);
+    const hslOrientation = 190 + (i * 30);
     // console.log(hslOrientation)
     return `hsla(${hslOrientation}, 100%, 45%, 0.2)`;
 }
 
 export const gradeSlideBorderFluorescentHsl = (i) => {
-    const hslOrientation = 190 + (i * 20);
+    const hslOrientation = 190 + (i * 30);
     // console.log(hslOrientation)
     return `hsl(${hslOrientation}, 100%, 75%)`;
 }
