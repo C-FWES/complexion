@@ -12,7 +12,7 @@ function PreviewSlide({slideInfo, index, activeSlideIndex}) {
     const [subsubHeader, setSubsubheader] = useState(null)
     const [ol, setOl] = useState([])
 
-    console.log("active index " + activeSlideIndex)
+    // console.log("active index " + activeSlideIndex)
 
     useEffect(() => {
       // parse markdown strings

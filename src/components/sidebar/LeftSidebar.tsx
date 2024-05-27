@@ -8,13 +8,17 @@ function LSidebar() {
 
     const {slides, setSlides} = useContext(SlideContext)
     const [activeSlideIndex, setActiveSlideIndex] = useState(-1)
-    // console.log(slides)
+    console.log(slides)
 
     useEffect(() => {
       const handleDeploySlide = (event) => {
         // create an empty slide object
         const slideObj = [event.detail, []]
-        setSlides(prevSlides => [...prevSlides, slideObj])
+        // prevent duplicate keys
+        const duplicateIsPresent = slides.find((s) => s[0] === slideObj[0])
+        if (!duplicateIsPresent) {
+          setSlides(prevSlides => [...prevSlides, slideObj])
+        }
       }
 
       const handleRemoveSlide = (event) => {
