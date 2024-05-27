@@ -38,7 +38,7 @@ function PreviewSlide({slideInfo, index, activeSlideIndex}) {
   
     return (
       <>
-        <div className='previewSlideContainer' style={{backgroundColor: slideBgHsl, border: activeSlideIndex === slideInfo[0] ? `5px solid ${slideBgHslLight}` : 'initial'}}>
+        <div className='previewSlideContainer' style={{backgroundColor: slideBgHsl, border: activeSlideIndex === slideInfo[0] ? `1px solid ${slideBgHslLight}` : 'initial'}}>
           <div className="previewSlideTextContainer" style={{border: activeSlideIndex === slideInfo[0] ? `1px solid ${slideBgHslLight}` : 'initial'}}>
             {header && <h1>{header}</h1>}
             {subHeader && <h2>{subHeader}</h2>}
